@@ -1,0 +1,170 @@
+/* Container principal com gradiente de fundo */
+.calcule-facil-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo Calcule Fácil */
+.logo-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.logo-calcule {
+  color: black;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.logo-facil {
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* Container principal com fundo branco */
+.main-container {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* Container de abas */
+.tabs-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  color: black !important;
+  text-transform: none !important;
+  font-weight: bold !important;
+}
+
+.tab-button.active {
+  text-decoration: underline;
+  color: #1CB5E0 !important;
+}
+
+/* Conteúdo da aba "Nova Chave" */
+.key-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Botão grande de gerar chave */
+.gerar-chave-button {
+  width: 100%;
+  background-color: #1CB5E0 !important;
+  color: white !important;
+  padding: 12px !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  border-radius: 4px !important;
+}
+
+/* Container do input de contrato */
+.contract-input-container {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.contract-label {
+  background-color: #1CB5E0;
+  color: black;
+  padding: 10px;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contract-input {
+  flex: 1;
+}
+
+.contract-input .MuiOutlinedInput-root {
+  border-radius: 0 4px 4px 0;
+  height: 100%;
+}
+
+/* Botão Gerar */
+.gerar-button {
+  background-color: #1CB5E0 !important;
+  color: white !important;
+  padding: 8px 30px !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  border-radius: 4px !important;
+  margin-top: 5px;
+  align-self: center;
+}
+
+/* Container da chave gerada */
+.key-result-container {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  margin-top: 5px;
+}
+
+.key-label {
+  background-color: #1CB5E0;
+  color: black;
+  padding: 10px;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  font-size: 14px;
+}
+
+.key-value {
+  flex: 1;
+}
+
+.key-value .MuiOutlinedInput-root {
+  border-radius: 0;
+  height: 100%;
+}
+
+/* Botão Copiar */
+.copy-button {
+  background-color: #1CB5E0 !important;
+  color: white !important;
+  padding: 8px 15px !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+  border-radius: 0 4px 4px 0 !important;
+}
+
+/* Botão Voltar */
+.voltar-button {
+  align-self: flex-start;
+  color: black !important;
+  text-transform: none !important;
+  font-size: 12px !important;
+  margin-top: 20px;
+  padding: 5px 10px !important;
+}

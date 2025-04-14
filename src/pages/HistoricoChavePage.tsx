@@ -25,73 +25,64 @@ const HistoricoChavesPage: React.FC = () => {
       <div className="historico-chaves-content">
         {/* Abas */}
         <div className="tabs-container">
-          <button 
-            className={`tab-button ${activeTab === 0 ? 'active' : ''}`}
-            onClick={() => setActiveTab(0)}
+          <button
+            className='tab-button' onClick={() => navigate("/dashboard")}
           >
             Nova Chave
           </button>
-          <button 
-            className={`tab-button ${activeTab === 1 ? 'active' : ''}`}
-            onClick={() => setActiveTab(1)}
+          <button
+            className='tab-button' onClick={() => navigate("/historico-chaves")}
           >
             Histórico de chaves
           </button>
-          <button 
-            className={`tab-button ${activeTab === 2 ? 'active' : ''}`}
-            onClick={() => setActiveTab(2)}
+          <button
+            className='tab-button' onClick={() => navigate("/relatorio")}
           >
             Relatório
           </button>
         </div>
 
-        {/* Conteúdo da aba Histórico de chaves */}
-        {activeTab === 1 && (
-          <div className="tab-content">
-            {/* Botão Buscar chave */}
-            <button className="buscar-chave-button">
-              Buscar chave
-            </button>
+        <div className="tab-content">
+          {/* Botão Buscar chave */}
+          <button className="buscar-chave-button">
+            Buscar chave
+          </button>
 
-            {/* Campo de busca */}
-            <div className="search-container">
-              <div className="search-label">
-                Informe o número do contrato vinculado à chave
+          {/* Campo de busca */}
+          <div className="search-container">
+            <div className="search-label">
+              Informe o número do contrato vinculado à chave
+            </div>
+            <input
+              type="text"
+              value={contractNumber}
+              onChange={(e) => setContractNumber(e.target.value)}
+              className="search-input"
+            />
+          </div>
+
+          {/* Botão Pesquisar */}
+          <button className="pesquisar-button" onClick={handleSearch}>
+            pesquisar
+          </button>
+
+          {/* Resultado da busca */}
+          {accessKey && (
+            <div className="result-container">
+              <div className="result-label">
+                Chave de acesso
               </div>
               <input
                 type="text"
-                value={contractNumber}
-                onChange={(e) => setContractNumber(e.target.value)}
-                className="search-input"
+                value={accessKey}
+                readOnly
+                className="result-input"
               />
             </div>
+          )}
+        </div>
 
-            {/* Botão Pesquisar */}
-            <button className="pesquisar-button" onClick={handleSearch}>
-              pesquisar
-            </button>
 
-            {/* Resultado da busca */}
-            {accessKey && (
-              <div className="result-container">
-                <div className="result-label">
-                  Chave de acesso
-                </div>
-                <input
-                  type="text"
-                  value={accessKey}
-                  readOnly
-                  className="result-input"
-                />
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Botão Voltar */}
-        <button className="voltar-button" onClick={handleBack}>
-          voltar
-        </button>
       </div>
     </div>
   );
